@@ -13,6 +13,7 @@ class GameOfLife : public Environment {
 	private:
 		int frame = 0;
 		bool paused = false;
+		bool frameAdvance = false;
 		std::vector<uint8_t> bufferA;
 		std::vector<uint8_t> bufferB;
 };
