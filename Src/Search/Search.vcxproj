@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{dfdd8278-463c-433d-8d1f-631299f33929}</ProjectGuid>
-    <RootNamespace>ALife</RootNamespace>
+    <ProjectGuid>{fc234d02-de6d-46c6-add3-2a5905baa172}</ProjectGuid>
+    <RootNamespace>Search</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -92,17 +92,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\include;$(SolutionDir)Src\ThirdParty\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sdl2.lib;sdl2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)\*.dll" "$(SolutionDir)Build\$(ProjectName)" /Y
-xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe" "$(SolutionDir)Build\$(ProjectName)" /Y</Command>
+      <Command>xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe" "$(SolutionDir)Build\$(ProjectName)" /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -113,19 +109,15 @@ xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\include;$(SolutionDir)Src\ThirdParty\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sdl2.lib;sdl2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)\*.dll" "$(SolutionDir)Build\$(ProjectName)" /Y
-xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe" "$(SolutionDir)Build\$(ProjectName)" /Y</Command>
+      <Command>xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe" "$(SolutionDir)Build\$(ProjectName)" /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -134,17 +126,13 @@ xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\include;$(SolutionDir)Src\ThirdParty\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sdl2.lib;sdl2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)\*.dll" "$(SolutionDir)Build\$(ProjectName)" /Y
-xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe" "$(SolutionDir)Build\$(ProjectName)" /Y</Command>
+      <Command>xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe" "$(SolutionDir)Build\$(ProjectName)" /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -155,41 +143,22 @@ xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\include;$(SolutionDir)Src\ThirdParty\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sdl2.lib;sdl2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)Src\ThirdParty\SDL2-2.28.5\lib\$(PlatformTarget)\*.dll" "$(SolutionDir)Build\$(ProjectName)" /Y
-xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe" "$(SolutionDir)Build\$(ProjectName)" /Y</Command>
+      <Command>xcopy "$(SolutionDir)Bin\$(ProjectName)\$(PlatformTarget)\$(Configuration)\*.exe" "$(SolutionDir)Build\$(ProjectName)" /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CA.cpp" />
-    <ClCompile Include="Cells.cpp" />
-    <ClCompile Include="Environment.cpp" />
-    <ClCompile Include="GameOfLife.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Random.cpp" />
-    <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CA.h" />
-    <ClInclude Include="Cells.h" />
-    <ClInclude Include="Color.h" />
-    <ClInclude Include="Environment.h" />
-    <ClInclude Include="GameOfLife.h" />
-    <ClInclude Include="MathUtils.h" />
-    <ClInclude Include="Random.h" />
-    <ClInclude Include="Renderer.h" />
-    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

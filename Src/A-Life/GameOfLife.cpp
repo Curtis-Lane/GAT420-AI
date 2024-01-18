@@ -31,13 +31,13 @@ void GameOfLife::Step() {
 				// X0X
 				// XXX
 				weight += Read<uint8_t>(readBuffer, x - 1, y - 1);
-				weight += Read<uint8_t>(readBuffer, x, y - 1);
+				weight += Read<uint8_t>(readBuffer, x    , y - 1);
 				weight += Read<uint8_t>(readBuffer, x + 1, y - 1);
-				weight += Read<uint8_t>(readBuffer, x + 1, y);
+				weight += Read<uint8_t>(readBuffer, x + 1, y    );
 				weight += Read<uint8_t>(readBuffer, x + 1, y + 1);
-				weight += Read<uint8_t>(readBuffer, x, y + 1);
+				weight += Read<uint8_t>(readBuffer, x    , y + 1);
 				weight += Read<uint8_t>(readBuffer, x - 1, y + 1);
-				weight += Read<uint8_t>(readBuffer, x - 1, y);
+				weight += Read<uint8_t>(readBuffer, x - 1, y    );
 
 				// Game of life rules
 				// If cell is alive, update
